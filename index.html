@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nabd News — Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Nabd News</h1>
+    <p class="muted">نسخة جاهزة للنشر — اربط Firebase في firebase-config.js</p>
+  </header>
+
+  <main>
+    <section id="new-article">
+      <h2>أضف مقالاً جديداً</h2>
+      <form id="article-form">
+        <input id="title" placeholder="عنوان المقال" required />
+        <textarea id="body" placeholder="نص المقال" rows="6" required></textarea>
+        <button type="submit">نشر</button>
+      </form>
+    </section>
+
+    <section id="articles">
+      <h2>المقالات</h2>
+      <div id="list">
+        <p class="muted">جاري التحميل…</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>مصدر: مشروع تجريبي — اربط Firebase لتخزين المقالات</small>
+  </footer>
+
+  <!-- Firebase SDKs (modular) -->
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js"></script>
+
+  <!-- ملف إعدادات Firebase (ضع config هنا) -->
+  <script src="firebase-config.example.js"></script>
+
+  <!-- ملف التطبيق -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
